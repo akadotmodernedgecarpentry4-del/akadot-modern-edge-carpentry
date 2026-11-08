@@ -3,54 +3,93 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Akadot Modern Edge Carpentry - Kumi</title>
+<title>Akadot Modern Edge Carpentry Group</title>
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#f8f5ef;color:#2b2b2b}
-header{background:#3d2817;color:#fff;padding:15px;text-align:center}
-header img{width:100px;height:100px;border-radius:50%;border:3px solid #d4a017;object-fit:cover}
-nav{background:#d4a017;padding:10px;text-align:center}
-nav a{color:#3d2817;text-decoration:none;margin:0 12px;font-weight:bold;font-size:18px}
-.hero{padding:20px;text-align:center;background:#fff}
-.hero h1{color:#3d2817}
-.btn{display:inline-block;background:#3d2817;color:#fff;padding:12px 25px;border-radius:8px;text-decoration:none;margin:10px;font-weight:bold}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;padding:15px}
-.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
-.card img{width:100%;height:180px;object-fit:cover}
-.card p{padding:8px;text-align:center;font-weight:bold}
-.contact{background:#3d2817;color:#fff;padding:20px;text-align:center;line-height:1.8}
-.contact a{color:#ffd700;text-decoration:none}
-footer{background:#000;color:#fff;text-align:center;padding:12px}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:#fdf8ef;color:#2b2118}
+.top{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:#fffef9;border-bottom:2px solid #e8d9b8;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:12px}
+.logo img{width:90px;height:auto}
+.logo h2{font-size:18px;color:#2b2118}
+nav a{margin:0 8px;text-decoration:none;color:#2b2118;font-weight:bold;font-size:14px}
+.donate{background:#2e7d32;color:#fff;padding:8px 16px;border-radius:6px;text-decoration:none;font-weight:bold}
+.hero{display:flex;flex-wrap:wrap;align-items:center;background:#fff7e8;padding:20px;gap:20px}
+.hero-text{flex:1;min-width:280px}
+.hero-text h1{font-size:32px;color:#3d2817;line-height:1.1}
+.hero-text p{margin:12px 0;font-size:15px;line-height:1.5}
+.btns{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+.btn-green{background:#2e7d32;color:#fff;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:bold}
+.btn-white{background:#fff;border:2px solid #3d2817;color:#3d2817;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:bold}
+.badge{margin-top:12px;background:#fff2d6;padding:6px 10px;border-radius:20px;display:inline-block;font-size:13px}
+.hero-img{flex:1;min-width:280px}
+.hero-img img{width:100%;border-radius:15px;object-fit:cover;max-height:380px}
+.stats{background:#c8e6b0;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;padding:12px 20px}
+.stat{background:#fff;border-radius:10px;padding:10px;display:flex;gap:8px;align-items:center;font-size:13px;box-shadow:0 2px 5px rgba(0,0,0,0.1)}
+.products{padding:20px;text-align:center}
+.products h2{font-size:26px;color:#3d2817}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}
+.card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 3px 10px rgba(0,0,0,0.1);text-align:left}
+.card img{width:100%;height:180px;object-fit:cover;background:#f3e8d0}
+.card .pad{padding:12px}
+.card h3{font-size:16px;color:#3d2817}
+.card p{font-size:13px;margin:6px 0;line-height:1.4}
+.price{font-weight:bold}
+.bottom{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;padding:20px;background:#fff8e8;font-size:13px;line-height:1.6}
+.bottom h4{color:#3d2817;margin-bottom:6px}
+.box{border:2px solid #c8a86a;border-radius:10px;padding:12px;background:#fff}
+.footer{background:#3d2817;color:#fff;padding:18px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;font-size:13px}
+.footer a{color:#ffd66e;text-decoration:none}
+.footer-bottom{text-align:center;font-size:11px;margin-top:10px;opacity:0.8}
+.momo{color:#ffd700;font-weight:bold}
 </style>
 </head>
 <body>
-<header>
-<img src="logo.jpg" alt="Akadot Logo">
-<h1>Akadot Modern Edge Carpentry Group</h1>
-<p>Kumi, Uganda - Hand Crafted Furniture</p>
-</header>
-<nav>
-<a href="index.html">Home</a>
-<a href="shop.html">Shop</a>
-<a href="contact.html">Gallery</a>
-<a href="contact.html">Contact</a>
-</nav>
+<div class="top">
+<div class="logo"><img src="logo.jpg" alt="Akadot"><h2>Akadot Modern Edge Carpentry Group</h2></div>
+<nav><a href="index.html">Home</a><a href="#about">About</a><a href="shop.html">Products</a><a href="#training">Training</a><a href="#projects">Projects</a><a href="contact.html">Contact</a><a class="donate" href="donate.html">Donate</a></nav>
+</div>
+
 <div class="hero">
-<h2>Welcome Chairman!</h2>
-<p>Kitchen Organiser, Finished Bed, Plate Stand, Coffee Table, Wood Curving, Wood Ripping</p>
-<a class="btn" href="shop.html">Shop Now</a>
-<a class="btn" href="https://wa.me/256785922819">WhatsApp Order</a>
+<div class="hero-text">
+<h1>Empowering Youth Through Craftsmanship</h1>
+<p>Youth-led carpentry CBO building quality wooden furniture and skills training for the next generation in Kumi, Uganda.</p>
+<div class="btns"><a class="btn-green" href="shop.html">Our Products</a><a class="btn-white" href="donate.html">Support Our Work</a></div>
+<div class="badge">Registered CBO • Community-Led • Sustainable Craftsmanship</div>
 </div>
-<div class="gallery">
-<div class="card"><img src="kitchen%20organiser.jpg" alt="Kitchen Organiser"><p>Kitchen Organiser</p></div>
-<div class="card"><img src="finished%20bed.jpg" alt="Finished Bed"><p>Finished Bed</p></div>
-<div class="card"><img src="coffee%20set%20table.jpg" alt="Coffee Table"><p>Coffee Set Table</p></div>
-<div class="card"><img src="logo.jpg" alt="Workshop"><p>Modern Edge</p></div>
+<div class="hero-img"><img src="finished%20bed.jpg" alt="Youth with bed"></div>
 </div>
-<div class="contact">
-<h3>Order Now - Kumi Uganda</h3>
-<p>MoMo: 0785922819<br>Bank: Finance Trust Bank 307214002162<br>Email: modernedgecarpentry4@gmail.com<br>WhatsApp: +256 785922819</p>
-<p>We Deliver - Carpentry Group Kumi</p>
+
+<div class="stats">
+<div class="stat">🌱<div><b>24+ Youth Trained</b><br>Annual skills training program</div></div>
+<div class="stat">🛏️<div><b>120+ Beds Crafted</b><br>Delivered to local families & schools</div></div>
+<div class="stat">🏘️<div><b>15 Communities Reached</b><br>Across Kumi District</div></div>
+<div class="stat">📅<div><b>5-Year Plan 2026-2030</b><br>Strategic Growth & Impact</div></div>
 </div>
-<footer>© Akadot Modern Edge Carpentry Group | MoMo 0785922819 | Bank 307214002162</footer>
+
+<div class="products">
+<h2>Our Products</h2>
+<p>Quality handcrafted wooden products crafted by local youth artisans</p>
+<div class="grid">
+<div class="card"><img src="finished%20bed.jpg"><div class="pad"><h3>Handcrafted Wooden Beds</h3><p>Durable polished hardwood beds, built to last. Custom sizes available for schools, homes & clinics.</p><p class="price">From 250,000 UGX</p></div></div>
+<div class="card"><img src="kitchen%20organiser.jpg"><div class="pad"><h3>Kitchen Organizers</h3><p>Wooden utensil & spice racks, pot holders, and storage trays for modern kitchens.</p><p class="price">From 45,000 UGX</p></div></div>
+<div class="card"><img src="coffee%20set%20table.jpg"><div class="pad"><h3>Desk Organizers</h3><p>Clean, functional desk organisers to keep workspaces tidy and professional.</p><p class="price">From 30,000 UGX</p></div></div>
+</div>
+</div>
+
+<div class="bottom">
+<div>
+<p>✅ Registered: KD/19/05/26/087<br>✅ Finance Trust Bank Account: 307214002162<br>✅ Kumi District Population: 287,275 – UBOS 2024<br>✅ Focus: Youth employment, skills training, community goods</p>
+<p style="margin-top:8px" class="momo">MoMo: 0785922819 | Bank: Finance Trust Bank 307214002162<br>Email: modernedgecarpentry4@gmail.com<br>WhatsApp: +256 785922819</p>
+</div>
+<div id="about"><h4>About Akadot Modern Edge Carpentry Group</h4><p>Akadot is a youth-led Community Based Organisation in Kumi, Eastern Uganda. We train youth in carpentry and entrepreneurship to fight unemployment.</p></div>
+<div class="box"><h4>Our 5-Year Plan 2026-2030</h4><p>• Train 100+ youth in carpentry & entrepreneurship<br>• Expand to 30 communities across Kumi District<br>• Equip workshop with modern tools & safety gear<br>• Produce 500+ furniture items for schools & clinics</p></div>
+</div>
+
+<div class="footer">
+<div><h4>Contact Us</h4><p>📍 Kumi District, Eastern Uganda<br>✉️ modernedgecarpentry4@gmail.com<br>📞 +256 785922819</p></div>
+<div><h4>Support Our Mission</h4><p>Help us train more youth and expand production. Partner with us today.</p></div>
+<div><a class="donate" href="https://wa.me/256785922819">Donate Now</a><p style="margin-top:10px">MoMo 0785922819 | Finance Trust Bank 307214002162</p></div>
+<div class="footer-bottom">Akadot Modern Edge Carpentry Group • Reg KD/19/05/26/087 • Finance Trust Bank Account 307214002162 • Kumi District Pop 287,275 UBOS 2024 • 5-Year Plan 2026-2030 • © 2025 Akadot Modern Edge Carpentry Group, All Rights Reserved.</div>
+</div>
 </body>
 </html>
