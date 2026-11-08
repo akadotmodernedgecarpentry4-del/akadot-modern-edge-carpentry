@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop Online – Akadot – Pay MoMo 0785922819 – Bank 307214002162</title>
+<style>
+body{font-family:Arial;margin:0;background:#FFF8F0}
+header{background:#5C3317;color:#fff;padding:12px;text-align:center}
+header a{color:#fff;margin:0 8px;text-decoration:none;font-weight:bold}
+h2{text-align:center;color:#5C3317}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;padding:15px}
+.card{background:#fff;border-radius:10px;padding:10px;box-shadow:0 2px 6px #0002;text-align:center}
+.card img{width:100%;height:180px;object-fit:cover;border-radius:8px}
+.btn{background:#2E7D32;color:#fff;padding:8px 12px;border:none;border-radius:6px;cursor:pointer;margin:3px}
+.btn2{background:#5C3317;color:#fff;padding:8px 12px;border:none;border-radius:6px;cursor:pointer}
+.cart{background:#fff;margin:15px;padding:15px;border-radius:10px;box-shadow:0 2px 6px #0002}
+footer{background:#222;color:#fff;padding:15px;text-align:center;font-size:11px}
+input,select{width:90%;padding:8px;margin:5px;border:1px solid #ccc;border-radius:5px}
+</style>
+</head><body>
+<header><b>AKADOT SHOP ONLINE</b><br><a href="index.html">Home</a> <a href="images.html">Gallery (18 Photos)</a> <a href="shop.html">Shop</a></header>
+
+<h2>Shop Online – Pay MoMo 0785922819 / 0780368677 / 0767002486 – Bank 307214002162</h2>
+<p style="text-align:center;font-size:12px;">Email: modernedgecarpentry4@gmail.com | Facebook: akadot modern | Reg KD/19/05/26/087 | Finance Trust Bank 307214002162 | Flutterwave accepted</p>
+
+<div class="products" id="products"></div>
+
+<div class="cart" id="cartBox">
+<h3>Your Cart – 🛒 <span id="cartCount">0</span> items</h3>
+<div id="cartList">Cart empty – Add products</div>
+<p><b>Total: UGX <span id="cartTotal">0</span></b></p>
+
+<h3>Checkout – Choose Payment:</h3>
+<input type="text" id="custName" placeholder="Your Name">
+<input type="text" id="custPhone" placeholder="Your Phone – 07xx">
+<input type="text" id="custAddress" placeholder="Delivery Address – Kumi / Kampala etc">
+
+<select id="payMethod">
+<option value="">-- Choose Payment Method --</option>
+<option value="MoMo 0785922819 – Akadot">MoMo 0785922819 – Akadot Main</option>
+<option value="MoMo 0780368677 – Akadot">MoMo 0780368677 – Akadot</option>
+<option value="MoMo 0767002486 – Akadot">MoMo 0767002486 – Akadot</option>
+<option value="Bank Finance Trust Bank 307214002162">Bank Finance Trust Bank 307214002162 – Akadot Modern Edge</option>
+<option value="Flutterwave – Card / MoMo / Bank">Flutterwave – Pay with Card / MoMo / Bank (Online)</option>
+</select>
+
+<button class="btn" onclick="checkout()">Place Order – WhatsApp Us</button>
+<button class="btn2" onclick="clearCart()">Clear Cart</button>
+
+<p style="font-size:11px;color:#555;margin-top:10px;">
+<b>How to pay:</b><br>
+1. MoMo: Send to 0785922819 / 0780368677 / 0767002486 – Name Akadot – After send, WhatsApp receipt to 0785922819<br>
+2. Bank: Finance Trust Bank – Acc 307214002162 – Name Akadot Modern Edge Carpentry Group – Branch Kumi<br>
+3. Flutterwave: We will send you link – Pay with MTN MoMo, Airtel, Card, Bank<br>
+Email: modernedgecarpentry4@gmail.com – We deliver Kumi & Uganda
+</p>
+</div>
+
+<footer>Akadot Modern Edge Carpentry Group – Reg KD/19/05/26/087 – Bank Finance Trust Bank 307214002162 – Email modernedgecarpentry4@gmail.com – Phones 0785922819 / 0780368677 / 0767002486 – Facebook akadot modern – Kumi Pop 287,275 – Teso</footer>
+
+<script>
+// PRODUCTS – Your real products – With your 18 photos
+let products = [
+{name:"Office Chairs – Set", price:250000, img:"images/office chairs.jpg", desc:"Hand-made office chairs – Strong"},
+{name:"Kitchen Organiser", price:120000, img:"images/Kitchen organiser.jpg", desc:"Kitchen organiser – Wood"},
+{name:"Pounding Mortar / Atabo – Correct spelling MORTAR", price:50000, img:"images/mortar.jpg", desc:"Pounding Mortar / Atabo – Teso Cultural – Hand-carved"},
+{name:"Table Organiser", price:35000, img:"images/Table organiser.jpg", desc:"Table organiser – Office / Home"},
+{name:"Finished Bed – Double", price:800000, img:"images/finished bed.jpg", desc:"Finished bed – Mahogany – Strong"},
+{name:"Coffee Set Table", price:150000, img:"images/coffee set table.jpg", desc:"Coffee set table – Modern"},
+{name:"Hand Crafted Plate Stand", price:45000, img:"images/hand crafted plate stand.jpg", desc:"Plate stand – Hand crafted – Kitchen"},
+{name:"Price Chart – Custom Orders", price:0, img:"images/Price chart.jpg", desc:"See price chart – Contact 0785922819"},
+{name:"Wood Curving / Carving", price:0, img:"images/wood curving.jpg", desc:"Wood curving – Art – Teso culture"},
+{name:"Student Practicing", price:0, img:"images/student practicing.jpg", desc:"Youth training – Teso unemployment 32.8% – Support us"},
+{name:"Workshop View", price:0, img:"images/workshop.jpg", desc:"Our workshop Akadot Village – Kadami – Real photos"},
+{name:"Hand Mortising Work", price:0, img:"images/hand mortising.jpg", desc:"Hand mortising – Traditional skill"},
+{name:"Hand Finishing", price:0, img:"images/hand finishing.jpg", desc:"Hand finishing – Quality"},
+{name:"Ripping – Timber Cutting", price:0, img:"images/ripping.jpg", desc:"Ripping timber – Professional"},
+{name:"Surface Cleaning / Sanding", price:0, img:"images/surface cleaning.jpg", desc:"Surface cleaning – Smooth finish"},
+{name:"Varnishing (Vanishing) Work", price:0, img:"images/vanishing.jpg", desc:"Varnishing – Protect wood – Spelling varnishing"},
+{name:"Ongoing Projects", price:0, img:"images/Ongoing projects.jpg", desc:"Ongoing projects – See our work"},
+{name:"Logo – Akadot", price:0, img:"images/Logo.jpg", desc:"Akadot Modern Edge – Reg KD/19/05/26/087"}
+];
+
+let cart = [];
+
+function showProducts(){
+ let box = document.getElementById('products');
+ products.forEach((p,i)=>{
+   box.innerHTML += `<div class="card">
+     <img src="${encodeURI(p.img)}" onerror="this.src='images/Logo.jpg'">
+     <h4>${p.name}</h4>
+     <p style="font-size:12px;">${p.desc}</p>
+     <p><b>${p.price>0 ? 'UGX '+p.price.toLocaleString() : 'Ask Price – 0785922819'}</b></p>
+     <button class="btn" onclick="addToCart(${i})">Add to Cart</button>
+     <a href="https://wa.me/256785922819?text=Hello Akadot – I want ${encodeURIComponent(p.name)} – Price ${p.price}" target="_blank"><button class="btn2">WhatsApp Order</button></a>
+   </div>`;
+ });
+}
+
+function addToCart(i){
+ cart.push(products[i]);
+ updateCart();
+ alert(products[i].name + " added to cart");
+}
+
+function updateCart(){
+ document.getElementById('cartCount').innerText = cart.length;
+ let total = 0;
+ let list = "";
+ cart.forEach((c, idx)=>{
+   total += c.price;
+   list += `${idx+1}. ${c.name} – UGX ${c.price.toLocaleString()} <button onclick="removeItem(${idx})">X</button><br>`;
+ });
+ document.getElementById('cartList').innerHTML = list || "Cart empty";
+ document.getElementById('cartTotal').innerText = total.toLocaleString();
+}
+
+function removeItem(idx){ cart.splice(idx,1); updateCart(); }
+function clearCart(){ cart=[]; updateCart(); }
+
+function checkout(){
+ let name = document.getElementById('custName').value;
+ let phone = document.getElementById('custPhone').value;
+ let addr = document.getElementById('custAddress').value;
+ let pay = document.getElementById('payMethod').value;
+ if(cart.length==0){ alert("Cart empty – Add product first"); return; }
+ if(!name || !phone){ alert("Enter name and phone"); return; }
+ if(!pay){ alert("Choose payment method"); return; }
+ let total = document.getElementById('cartTotal').innerText;
+ let items = cart.map(c=> c.name + " UGX " + c.price).join(", ");
+ let msg = `Hello Akadot Modern Edge – NEW ORDER:%0AName: ${name}%0APhone: ${phone}%0AAddress: ${addr}%0AItems: ${items}%0ATotal: UGX ${total}%0APayment: ${pay}%0ABank: Finance Trust Bank 307214002162%0AEmail: modernedgecarpentry4@gmail.com%0A%0AI will pay via ${pay} – Please confirm`;
+ window.open("https://wa.me/256785922819?text=" + msg, "_blank");
+ window.open("https://wa.me/256780368677?text=" + msg, "_blank");
+}
+
+showProducts();
+</script>
+</body></html>
