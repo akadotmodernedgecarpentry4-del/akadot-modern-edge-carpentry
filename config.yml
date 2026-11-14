@@ -10,10 +10,9 @@ plugins:
     - jekyll-seo-tag
     - jekyll-sitemap
 
-# Theme - Makes site professional
-theme: minima
-minima:
-  skin: auto
+# theme: minima  <- Commented, so your green design shows alone
+# minima:
+#   skin: auto
 
 # Donor info
 bank_account: Finance Trust Bank 307214002162
