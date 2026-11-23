@@ -271,8 +271,62 @@ function sendToWhatsApp(e){
 <p style="font-size:11px;text-align:center;margin-top:8px;">Your data goes to modernedgecarpentry4@gmail.com – Safe with Akadot CBO</p>
 </div>
 </div>
-
 </div>
+  <!-- CONTACT US SECTION - AKADOT -->
+<div style="background:#5C3317;color:#fff;padding:25px 15px;text-align:center;border-radius:15px;margin:15px">
+  <h2 style="color:#FFCC00;margin:0">📞 CONTACT US - AKADOT</h2>
+  <p style="font-size:14px">We reply fast! Choose how to reach us:</p>
+
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/256785922819?text=Hello Akadot, I want to order..." 
+     style="display:block;background:#25D366;color:#fff;padding:15px;border-radius:10px;text-decoration:none;font-weight:bold;margin:10px 0;font-size:17px">
+     💬 WhatsApp Us - 0785922819
+  </a>
+
+  <!-- EMAIL -->
+  <a href="mailto:modernedgecarpentry4@gmail.com?subject=New Order - Akadot&body=Hello Akadot, I want to order..." 
+     style="display:block;background:#D44638;color:#fff;padding:15px;border-radius:10px;text-decoration:none;font-weight:bold;margin:10px 0;font-size:16px">
+     📧 Email Us - modernedgecarpentry4@gmail.com
+  </a>
+
+  <!-- FACEBOOK -->
+  <a href="https://facebook.com/akadotmodern" target="_blank"
+     style="display:block;background:#1877F2;color:#fff;padding:15px;border-radius:10px;text-decoration:none;font-weight:bold;margin:10px 0;font-size:17px">
+     👍 Facebook - akadot modern
+  </a>
+
+  <!-- CALL DIRECT -->
+  <a href="tel:+256785922819"
+     style="display:block;background:#FFCC00;color:#000;padding:15px;border-radius:10px;text-decoration:none;font-weight:bold;margin:10px 0;font-size:17px">
+     📞 Call Us - 0785922819
+  </a>
+
+  <!-- CLICK TO COPY NUMBERS -->
+  <div style="background:#fff;color:#000;padding:15px;border-radius:10px;margin-top:15px;text-align:left">
+    <b>📋 Click To Copy MoMo Numbers:</b><br><br>
+    <b id="n1">0785922819</b> - Main <button onclick="copyThis('n1')" style="background:#000;color:#FFCC00;border:none;padding:7px 12px;border-radius:6px">Copy</button><br><br>
+    <b id="n2">0780368677</b> <button onclick="copyThis('n2')" style="background:#000;color:#FFCC00;border:none;padding:7px 12px;border-radius:6px">Copy</button><br><br>
+    <b id="n3">0767002486</b> <button onclick="copyThis('n3')" style="background:#000;color:#FFCC00;border:none;padding:7px 12px;border-radius:6px">Copy</button><br>
+    <p id="copyMsg" style="color:green;font-weight:bold;font-size:13px;margin:8px 0 0"></p>
+    <p style="font-size:12px;color:#555;margin:5px 0 0">Copy number -> Dial *165# -> Paste -> Send</p>
+  </div>
+
+  <p style="font-size:12px;margin-top:15px;color:#FFCC00">
+    Akadot Modern Edge Carpentry Group<br>
+    Reg: KD/19/05/26/087 | Kumi, Uganda<br>
+    Bank: Finance Trust Bank 307214002162
+  </p>
+</div>
+
+<script>
+function copyThis(id){
+  let num = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(num);
+  document.getElementById('copyMsg').innerText = "✅ Copied: " + num;
+  alert("Copied: " + num);
+}
+</script>
+<!-- END CONTACT US -->
 <footer>
   <h3 style="margin:0;color: white,,;">AKADOT MODERN EDGE CARPENTRY CBO</h3>
 <p>Founded by CEO: OKIRIA ASHA MORRIS<br>Papa Ekalamu's Plot, Akadot Trading Center, Kadami Parish, Kumi District, Uganda<br>📞 0785922819 / 0753922819 | 📧 modernedgecarpentry4@gmail.com | Facebook: Akadot Modern Edge</p>
