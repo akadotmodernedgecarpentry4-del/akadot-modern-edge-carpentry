@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Akadot - Private Invoice</title>
+<style>
+body{font-family:Arial;background:#f5f5f5;margin:0;padding:15px}
+.box{background:#fff;padding:20px;border-radius:15px;max-width:500px;margin:20px auto;border:2px solid #5C3317}
+input,select{width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;margin:5px 0 10px;box-sizing:border-box}
+button{width:100%;background:#5C3317;color:white;padding:14px;border:none;border-radius:10px;font-weight:bold;font-size:16px}
+</style>
+</head>
+<body>
+
+<!-- PIN LOCK -->
+<div id="lockScreen" class="box" style="text-align:center">
+  <h2 style="color:#5C3317">🔒 AKADOT MODERN EDGE CARPENTRY PRIVATE</h2>
+  <p style="color:#888">Staff Only - Enter PIN</p>
+  <input id="pinInput" type="password" placeholder="Enter PIN" inputmode="numeric">
+  <button onclick="checkPin()">Unlock Invoice Tool →</button>
+  <p id="pinError" style="color:red;display:none">Wrong PIN. Try again.</p>
+</div>
+
+<!-- INVOICE TOOL - HIDDEN UNTIL PIN -->
+<div id="invoiceTool" class="box" style="display:none">
+  <h2 style="text-align:center;color:#5C3317;margin:0">🧾 AKADOT MODERN EDGE CARPENTRY INVOICE</h2>
+  <p style="text-align:center;color:#888;font-size:13px">Modern Edge Carpentry - Kampala</p>
+
+  <label>Customer Name:</label>
+  <input id="invName" placeholder="e.g. Asha - Morris">
+  <label>Phone:</label>
+  <input id="invPhone" placeholder="e.g. 0780368677">
+  <label>Item / Work Done:</label>
+  <input id="invItem" placeholder="e.g. Modern Kitchen Cabinet">
+  <label>Price (UGX):</label>
+  <input id="invPrice" type="number" placeholder="e.g. 1500000">
+  <label>Delivery (UGX):</label>
+  <input id="invDelivery" type="number" placeholder="e.g. 100000" value="0">
+  <label>Payment Method:</label>
+  <select id="invPay">
+    <option>MTN MoMo</option>
+    <option>Airtel Money</option>
+    <option>Cash</option>
+    <option>Bank Transfer</option>
+  </select>
+  <label>Deposit Paid (UGX):</label>
+  <input id="invDeposit" type="number" placeholder="e.g. 500000" value="0">
+
+  <button onclick="makeInvoice()">Generate Invoice →</button>
+
+  <div id="invoiceResult" style="display:none;margin-top:20px;border:1px dashed #5C3317;padding:15px;border-radius:10px;background:#FFFBF5"></div>
+  <button id="printBtn" onclick="window.print()" style="display:none;background:#25D366;margin-top:10px">Print / Save as PDF</button>
+</div>
+
+<script>
+function checkPin(){
+  if(document.getElementById('pinInput').value==='1988'){
+    document.getElementById('lockScreen').style.display='none';
+    document.getElementById('invoiceTool').style.display='block';
+  } else {
+    document.getElementById('pinError').style.display='block';
+  }
+}
+function makeInvoice(){
+  let name=document.getElementById('invName').value||'Customer';
+  let phone=document.getElementById('invPhone').value||'';
+  let item=document.getElementById('invItem').value||'Carpentry Work';
+  let price=Number(document.getElementById('invPrice').value||0);
+  let del=Number(document.getElementById('invDelivery').value||0);
+  let dep=Number(document.getElementById('invDeposit').value||0);
+  let pay=document.getElementById('invPay').value;
+  let total=price+del;
+  let balance=total-dep;
+  let invNo='AK-'+Math.floor(1000+Math.random()*9000);
+  let date=new Date().toLocaleDateString('en-GB');
+  document.getElementById('invoiceResult').style.display='block';
+  document.getElementById('printBtn').style.display='block';
+  document.getElementById('invoiceResult').innerHTML=
+  '<h3 style="color:#5C3317;margin:0;text-align:center">AKADOT MODERN EDGE CARPENTRY</h3>'+
+  '<p style="text-align:center;font-size:12px;color:#888">Kumi| Invoice '+invNo+' | Date: '+date+'</p><hr>'+
+  '<p><b>Customer:</b> '+name+'<br><b>Phone:</b> '+phone+'</p>'+
+  '<p><b>Item:</b> '+item+'<br><b>Price:</b> UGX '+price.toLocaleString()+'<br><b>Delivery:</b> UGX '+del.toLocaleString()+'</p><hr>'+
+  '<h3 style="color:#5C3317">TOTAL: UGX '+total.toLocaleString()+'</h3>'+
+  '<p>Deposit Paid: UGX '+dep.toLocaleString()+'<br><b>Balance Due: UGX '+balance.toLocaleString()+'</b></p>'+
+  '<p><b>Payment:</b> '+pay+'</p>'+
+  '<p style="font-size:12px;color:#888">Thank you for trusting Akadot. We build to last.</p>';
+}
+</script>
+</body>
+</html>
