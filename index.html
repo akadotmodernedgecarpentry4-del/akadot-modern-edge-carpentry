@@ -379,28 +379,5 @@ function copyThis(id){
 </div>
 
 <script>
-function makeInvoice(){
-  let name=document.getElementById('invName').value||'Customer';
-  let phone=document.getElementById('invPhone').value||'';
-  let item=document.getElementById('invItem').value||'Carpentry Work';
-  let price=Number(document.getElementById('invPrice').value||0);
-  let del=Number(document.getElementById('invDelivery').value||0);
-  let pay=document.getElementById('invPay').value;
-  let total=price+del;
-  let invNo='AK-'+Math.floor(1000+Math.random()*9000);
-  let date=new Date().toLocaleDateString('en-GB');
-  document.getElementById('invoiceResult').style.display='block';
-  document.getElementById('printBtn').style.display='block';
-  document.getElementById('invoiceResult').innerHTML=
-  '<h3 style="color:#5C3317;margin:0;text-align:center">AKADOT MODERN EDGE CARPENTRY</h3>'+
-  '<p style="text-align:center;font-size:12px;color:#888">Kampala | Invoice '+invNo+' | Date: '+date+'</p><hr>'+
-  '<p><b>Customer:</b> '+name+'<br><b>Phone:</b> '+phone+'</p>'+
-  '<p><b>Item:</b> '+item+'<br><b>Price:</b> UGX '+price.toLocaleString()+'<br><b>Delivery:</b> UGX '+del.toLocaleString()+'</p><hr>'+
-  '<h3 style="color:#5C3317">TOTAL: UGX '+total.toLocaleString()+'</h3>'+
-  '<p><b>Payment:</b> '+pay+'<br><b>Status:</b> Pending / Paid</p>'+
-  '<p style="font-size:12px;color:#888">Thank you for trusting Akadot. We build to last.</p>';
-}
-</script>
-<!-- END INVOICE -->
 </body>
 </html>
